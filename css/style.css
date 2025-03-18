@@ -61,6 +61,23 @@ body{
     cursor: pointer;
 }
 
+.card--buy{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.card--buy > img{
+    height: 80%;
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.card--buy > p{
+    height: 20%;
+    font-size: 75%;
+}
 .timerText{
     font-size: 200%;
 }

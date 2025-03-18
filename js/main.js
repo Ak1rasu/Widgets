@@ -51,3 +51,19 @@ slider.oninput = function(){
     rangeValue.innerText = slider.value + "X";
     body.style.fontSize = slider.value + "8%";
 }
+
+/*hier begint slide 2*/
+
+const text = document.getElementById("js--text");
+const img = document.getElementById("js--img");
+
+let data = fetch("../data.json").then(
+    function(binnenGekomenData){
+        return binnenGekomenData.json();
+    }).then(
+        function(echteData){
+            text.innerHTML = echteData.text;
+            img.setAttribute("src", echteData.img);
+        }
+    );
+
