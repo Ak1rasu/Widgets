@@ -22,7 +22,7 @@ startButton.onclick = function(){
         seconds = 0;
     }
     secondsTimer.innerText = seconds;
-}, 100);
+}, 1000);
 }
 
 stopButton.onclick = function(){
@@ -57,13 +57,13 @@ slider.oninput = function(){
 const text = document.getElementById("js--text");
 const img = document.getElementById("js--img");
 
-let data = fetch("../data.json").then(
+let data = fetch("json/data.json").then(
     function(binnenGekomenData){
         return binnenGekomenData.json();
     }).then(
         function(echteData){
             text.innerHTML = echteData.text;
-            img.setAttribute("src", echteData.img);
+            img.setAttribute('src', echteData.img);
         }
     );
 
